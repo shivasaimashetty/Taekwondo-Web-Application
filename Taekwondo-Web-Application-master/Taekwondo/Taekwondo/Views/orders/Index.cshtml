@@ -1,0 +1,174 @@
+﻿@model IEnumerable<Taekwondo.Models.order>
+
+@{
+    ViewBag.Title = "ORDER";
+}
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <style>
+
+        table, th {
+            border: 1px solid black;
+            font-family: "Times New Roman", Times,sans-serif;
+            width: auto;
+        }
+
+        th, td {
+            text-align: center;
+            padding-top: 5px;
+            height: 100px;
+            width: inherit;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-display: block;
+            height: 80px;
+            width: auto;
+            font-color: "solid-black";
+        }
+
+        td {
+            color: black;
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: "Times New Roman", Times,sans-serif;
+            font-color: "solid-black";
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 1px solid #555555;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: "Times New Roman", Times,sans-serif;
+            font-color: "solid-black";
+        }
+    </style>
+
+    <h2><u><center>ORDER DETAILS</center></u></h2>
+    <h3>
+        <button class="button " style="font-size:16px">@Html.ActionLink("Add Record", "Create") <i class="material-icons">add_to_photos</i></button>
+        </button>
+    </h3>
+    @using (Html.BeginForm("Index", "orders", FormMethod.Get))
+    {
+        <b>
+            <p>
+                &nbsp;&nbsp;
+                Please Select Product: @Html.DropDownList("product", "All Orders") &nbsp;&nbsp;
+                <button class="button1" style="font-size:15px"><input type="submit" value="Search" /><i class="material-icons">youtube_searched_for</i></button>
+            </p>
+        </b>
+    }
+    <b>
+        <table class="table">
+            <tr>
+                <th>
+                    ORDER INVOICE NO
+                </th>
+                
+                <th>
+                    PRODUCT NAME
+                </th>
+                <th>
+                    PRODUCT DESC
+                </th>
+                <th>
+                    UNIT PRICE
+                </th>
+                <th>
+                    QUANTITY
+                </th>
+                <th>
+                    ORDER DATE
+                </th>
+                <th>
+                    SUPPLIER FIRST NAME
+                </th>
+                <th>
+                    SUPPLIER LAST NAME
+                </th>
+                <th>
+                    SUPPLIER EMAIL
+                </th>
+                <th>
+                    SUPPLIER PHONE NUMBER
+                </th>
+                <th>
+                    ACTION REQUIRED
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.orderID)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.product.productname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.product.productdesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.unitprice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.orderdate)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.supplier.fname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.supplier.lname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.supplier.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.supplier.phonenumber)
+                    </td>
+                    <td>
+                        <button class="button1" style="font-size:15px">@Html.ActionLink("Edit", "Edit", new { id = item.orderID }) <i class="material-icons">mode_edit</i></button>
+                        <button class="button1" style="font-size:15px">@Html.ActionLink("Details", "Details", new { id = item.orderID })<i class="material-icons">description</i></button>
+                        <button class="button1" style="font-size:15px">@Html.ActionLink("Delete", "Delete", new { id = item.orderID })<i class="material-icons">delete</i></button>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </b>

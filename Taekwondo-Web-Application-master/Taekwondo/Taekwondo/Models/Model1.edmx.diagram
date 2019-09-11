@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9990d74f4a2d4d19bb1ebf1cd55a34df" Name="Diagram1">
+        <EntityTypeShape EntityType="TaekwondoModel.classschedule" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.fee" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.inventory" Width="1.5" PointX="13" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.order" Width="1.5" PointX="16" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.parent" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.product" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.rank" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.studentclass" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.studentrank" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.student" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.supplier" Width="1.5" PointX="10.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaekwondoModel.studentfee" Width="1.5" PointX="8.25" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="TaekwondoModel.FK_studentclass2" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_studentfee2" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_inventory1" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_inventory2" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_orders1" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_orders2" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_student" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_student1" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_studentrank2" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_studentclass1" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_studentrank1" ManuallyRouted="false" />
+        <AssociationConnector Association="TaekwondoModel.FK_studentfee1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

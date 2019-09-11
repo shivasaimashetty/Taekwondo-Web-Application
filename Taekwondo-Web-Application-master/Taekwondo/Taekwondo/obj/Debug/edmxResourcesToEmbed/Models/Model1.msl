@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TaekwondoModelStoreContainer" CdmEntityContainer="TaekwondoEntities">
+    <EntitySetMapping Name="classschedules">
+      <EntityTypeMapping TypeName="TaekwondoModel.classschedule">
+        <MappingFragment StoreEntitySet="classschedule">
+          <ScalarProperty Name="classID" ColumnName="classID" />
+          <ScalarProperty Name="classlevel" ColumnName="classlevel" />
+          <ScalarProperty Name="classday" ColumnName="classday" />
+          <ScalarProperty Name="classtimings" ColumnName="classtimings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fees">
+      <EntityTypeMapping TypeName="TaekwondoModel.fee">
+        <MappingFragment StoreEntitySet="fee">
+          <ScalarProperty Name="feeID" ColumnName="feeID" />
+          <ScalarProperty Name="feedesc" ColumnName="feedesc" />
+          <ScalarProperty Name="feeamount" ColumnName="feeamount" />
+          <ScalarProperty Name="duedate" ColumnName="duedate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventories">
+      <EntityTypeMapping TypeName="TaekwondoModel.inventory">
+        <MappingFragment StoreEntitySet="inventory">
+          <ScalarProperty Name="inventoryID" ColumnName="inventoryID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="costprice" ColumnName="costprice" />
+          <ScalarProperty Name="sellingprice" ColumnName="sellingprice" />
+          <ScalarProperty Name="profit" ColumnName="profit" />
+          <ScalarProperty Name="quantityinstock" ColumnName="quantityinstock" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="TaekwondoModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="unitprice" ColumnName="unitprice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="orderdate" ColumnName="orderdate" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parents">
+      <EntityTypeMapping TypeName="TaekwondoModel.parent">
+        <MappingFragment StoreEntitySet="parents">
+          <ScalarProperty Name="parentID" ColumnName="parentID" />
+          <ScalarProperty Name="fathername" ColumnName="fathername" />
+          <ScalarProperty Name="fatheremail" ColumnName="fatheremail" />
+          <ScalarProperty Name="fathermobile" ColumnName="fathermobile" />
+          <ScalarProperty Name="mothername" ColumnName="mothername" />
+          <ScalarProperty Name="motheremail" ColumnName="motheremail" />
+          <ScalarProperty Name="mothermobile" ColumnName="mothermobile" />
+          <ScalarProperty Name="emergencycontact" ColumnName="emergencycontact" />
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="TaekwondoModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="productname" ColumnName="productname" />
+          <ScalarProperty Name="productdesc" ColumnName="productdesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ranks">
+      <EntityTypeMapping TypeName="TaekwondoModel.rank">
+        <MappingFragment StoreEntitySet="ranks">
+          <ScalarProperty Name="rankID" ColumnName="rankID" />
+          <ScalarProperty Name="rankname" ColumnName="rankname" />
+          <ScalarProperty Name="rankbelt" ColumnName="rankbelt" />
+          <ScalarProperty Name="rankdesc" ColumnName="rankdesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studentclasses">
+      <EntityTypeMapping TypeName="TaekwondoModel.studentclass">
+        <MappingFragment StoreEntitySet="studentclass">
+          <ScalarProperty Name="stdclassID" ColumnName="stdclassID" />
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="classID" ColumnName="classID" />
+          <ScalarProperty Name="attendeddate" ColumnName="attendeddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studentranks">
+      <EntityTypeMapping TypeName="TaekwondoModel.studentrank">
+        <MappingFragment StoreEntitySet="studentrank">
+          <ScalarProperty Name="stdrankID" ColumnName="stdrankID" />
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="rankID" ColumnName="rankID" />
+          <ScalarProperty Name="dateachieved" ColumnName="dateachieved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="TaekwondoModel.student">
+        <MappingFragment StoreEntitySet="students">
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="rankID" ColumnName="rankID" />
+          <ScalarProperty Name="joindate" ColumnName="joindate" />
+          <ScalarProperty Name="parentdetails" ColumnName="parentdetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="TaekwondoModel.supplier">
+        <MappingFragment StoreEntitySet="suppliers">
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studentfees">
+      <EntityTypeMapping TypeName="TaekwondoModel.studentfee">
+        <MappingFragment StoreEntitySet="studentfee">
+          <ScalarProperty Name="stdfeeID" ColumnName="stdfeeID" />
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="feeID" ColumnName="feeID" />
+          <ScalarProperty Name="paiddate" ColumnName="paiddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
